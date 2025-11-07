@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beyond The Net! | The Spirit Behind the Net</title>
+  <link rel="icon" href="https://i.pinimg.com/736x/b8/72/36/b872362351b81d27d3587090218207a5.jpg">
+  <style>
+    /* ===== GLOBAL STYLE ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: #1a0f0f;
+      color: #fff;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+
+    main {
+      max-width: 850px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(50, 30, 30, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(255, 136, 51, 0.2);
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1, h2 {
+      color: #ff9b42;
+      text-align: center;
+      font-family: 'Russo One', sans-serif;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 1.5em;
+    }
+
+    p {
+      text-align: justify;
+      margin: 15px 0;
+      font-size: 1.05em;
+      color: #ffe6c4;
+    }
+
+    .highlight {
+      color: #ffb86b;
+      font-weight: 600;
+    }
+
+    .quote {
+      background: rgba(255, 156, 66, 0.1);
+      border-left: 4px solid #ff9b42;
+      padding: 15px;
+      margin: 25px 0;
+      font-style: italic;
+      text-align: center;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-top: 2px solid #ffb86b;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Scroll Indicator */
+    #scrollBar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 6px;
+      background: linear-gradient(90deg, #ff9333, #ffd480);
+      z-index: 100;
+      transition: width 0.2s ease;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      main {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main>
+    <h1 class="fade">The Spirit Behind the Net</h1>
+    <p class="fade">Volleyball isn’t just a sport — it’s a <span class="highlight">dance of teamwork, rhythm, and trust</span>. Every spike, every serve, and every dive reflects the connection between players who move as one heartbeat. It’s not about who jumps the highest, but who dares to keep the ball alive. Just like life, the ball must keep moving — no matter how tough the rally becomes.</p>
+
+    <div class="quote fade">
+      "Don’t you dare look down! Volleyball is a sport where you’re always looking up!”  
+      <br>– Keishin Ukai, <span class="highlight">Haikyuu!!</span>
+    </div>
+
+    <h2 class="fade">Where It All Began</h2>
+    <p class="fade">Volleyball was born in 1895 by <span class="highlight">William G. Morgan</span> — a simple game made for fun, fitness, and friendship. Over a century later, it evolved into a sport that unites nations, inspiring millions. From the sand courts of Brazil to the indoor arenas of Japan, volleyball is a universal language of teamwork and energy.</p>
+
+    <p class="fade">And then came <span class="highlight">Haikyuu!!</span> — an anime that breathed life into volleyball in a way no textbook could. It showed us how passion and persistence can turn underdogs into legends. Whether it’s Karasuno’s fierce spikes, Aoba Johsai’s precision plays, or Fukurodani’s unshakable spirit, every team teaches us that victory begins in the heart.</p>
+
+    <h2 class="fade">What We Learn Beyond the Game</h2>
+    <p class="fade">Haikyuu!! isn’t just about volleyball. It’s about <span class="highlight">dreams, self-belief, and friendship</span>. Every fall, every defeat, and every comeback teaches us that success isn’t found in trophies — it’s found in the courage to try again. The series captures what volleyball truly represents: the power of connection and the joy of growth.</p>
+
+    <p class="fade">So, whether you’re a player, a dreamer, or just someone cheering from the sidelines, remember — the net doesn’t separate us; it brings us together. Keep jumping, keep fighting, and never stop believing in your next point!</p>
+
+    <div class="quote fade">
+      “Fly high, even if your wings are small. Because once you take off, you’ll never want to land again.” 🕊️
+    </div>
+  </main>
+
+  <footer>
+   <h5 style="font-family: sans-serif; text-align: center; color: rgb(184, 57, 6)">© 2025 Beyond The Net! | Designed by Azra | Inspired by Haikyuu!! | <a href='https://haikyu.jp'>Official Website</a></h5>
+    </footer>
+
+  <script>
+    // ===== Scroll Animation =====
+    const fadeEls = document.querySelectorAll('.fade');
+    window.addEventListener('scroll', () => {
+      fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('show');
+        }
+      });
+    });
+
+    // ===== Scroll Progress Bar =====
+    window.onscroll = function() {
+      const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (scrollTop / scrollHeight) * 100;
+      document.getElementById("scrollBar").style.width = scrolled + "%";
+    };
+  </script>
+</body>
+</html>

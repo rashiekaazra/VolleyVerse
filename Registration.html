@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Join The Game</title>
+    <link rel="icon" href="https://i.pinimg.com/736x/b8/72/36/b872362351b81d27d3587090218207a5.jpg">
+</head>
+<style>
+    body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient( rgb(0, 0, 0), #e0a25c, #000000); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    }
+    
+    h2 {
+        color: #eb671b;
+        margin-bottom: 10px;
+    }
+    .form-container {
+        background-color: #eda162b1;
+        padding: 25px;
+        border-radius: 12px;
+        width: 350px;
+        margin: 40px auto;
+        padding: 30px 25px;
+        box-shadow: 0 4px 8px #000000;
+        text-align: left;
+    }
+    label {
+        display: flow-root;
+        text-align: left;
+        margin: 0px 0 0px;
+        font-weight: bold;
+        color: #fdfdfd;
+    }
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1PX solid rgb(223, 100, 28);
+        border-radius: 6px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color : rgb(102, 25, 25);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+    }
+    footer {
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    font-weight: 500;
+    }
+
+    /* buat tablet landscape dan yg bisa scroll ke bawah */
+@media screen and (max-width: 1024px) {
+    .form-container {
+        width: 70%;
+        margin: 50px auto;
+    }
+
+    input, select {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+}
+
+/* buat tablet & HP besar */
+@media screen and (max-width: 768px) {
+    body {
+        background-attachment: scroll;
+    }
+
+    .form-container {
+        width: 85%;
+        padding: 25px 20px;
+        margin: 40px auto;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    input, select {
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+}
+
+/* buat HP kecil */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+        background-size: cover;
+    }
+
+    .form-container {
+        width: 95%;
+        padding: 20px 15px;
+        margin: 30px auto;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    input, select {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    input[type="submit"] {
+        font-size: 13px;
+        padding: 8px 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px;
+    }
+}
+
+
+</style>
+<body>
+    <div class="banner" style="background-size: cover; background-position: center;">
+    </div>
+    <h1 style="font-family: sans-serif; text-align: center; color: rgb(239, 96, 40)">The Court Awaits Your Next Jump!</h1>
+
+     <div class="form-container">
+        <h3 style="font-family: sans-serif; text-align: center; color: rgb(255, 255, 255)">Personal Information</h3>
+    <div style="text-align:center;">
+        <label for="Nama"> Nama Lengkap </label>
+        <br>
+        <input type="text" name="Nama" id="Nama" placeholder="Nama" required>
+    </div>
+
+    <br>
+
+    <div style="text-align: center;">
+        <label for="Nama"> Tanggal Lahir</label>
+        <br>
+        <input type="date" name="Nama" id="birth" required>
+    </div>
+
+    <br>
+
+    <div style="text-align: center;">
+
+       <label for="jenis kelamin"> jenis kelamin </label>
+       <br> 
+        <select name="jenis kelamin" id="jenis kelamin" required>
+        <option value="laki-laki">laki-laki</option>
+        <option value="perempuan">perempuan</option>
+        <option value="lainnya">lainnya</option>  </select>  
+      </div>
+  <div style="text-align:center;">
+        <label for="Number">Phone Number </label>
+        <br>
+        <input type="tel" name="Number" id="Number" placeholder="0000-0000-0000" required>
+    </div>
+    <br>
+    <div style="text-align:center;">
+        <label for="Email">Email Address</label>
+        <br>
+        <input type="email" name="Email" id="Email" placeholder="@email.com" required>
+    </div>
+    <br>
+    <div>
+
+    </div>
+    </div>
+     <div class="form-container">
+        <h3 style="font-family: sans-serif; text-align: center; color: rgb(255, 255, 255)">Volleyball Experience</h3>
+        <div style="text-align:center;">
+        <br>
+        <label for="team">Have You Joined a Volleyball Team Before?</label>
+        <br> 
+        <select name="Team" id="team" required>
+        <option value="Beginner">Yes, I Have</option>
+        <option value="Intermediate">No, I Haven't</option>
+        </select>
+
+    </div>
+    <div style="text-align: center;">
+        <label for="Level" >Experience Level</label>
+        <br> 
+        <select name="Level" id="Level" required>
+        <option value="Beginner">Beginner</option>
+        <option value="Intermediate">Intermediate</option>
+        <option value="Advanced">Advanced</option>     
+        </select>
+    </div>
+    <br>
+    <div style="text-align: center;">
+
+       <label for="Position">Position</label>
+       <br> 
+        <select name="Position" id="Position" required>
+        <option value="Setter">Setter</option>
+        <option value="Wing Spiker">Wing Spiker</option>
+        <option value="Middle Blocker">Middle Blocker</option> 
+        <option value="Opposite Hitter">Opposite Hitter</option> 
+        <option value="Libero"></option>  
+        </select>  
+      </div>
+   <div style="text-align:center;">
+        <label for="motivates">What Motivates you to join This Training?</label>
+        <br>
+        <input type="text" name="Motivates" id="Motivates" required>
+    </div>
+    </div>
+     <div class="form-container">
+        <h3 style="font-family: sans-serif; text-align: center; color: rgb(255, 255, 255)">Training Details</h3>
+    <div style="text-align:center;">
+        <br>
+        <label for="Schedules">Choose Training Schedules</label>
+        <br> 
+        <select name="Schedules" id="Schedules" required>
+        <option value="weekday">Weekday (Mon-Fri)</option>
+        <option value="weekend">weekend (Sat-Sun)</option>
+        </select>
+    </div>
+    <div style="text-align:center;">
+        <br>
+        <label for="Time">Preferred Time</label>
+        <br> 
+        <select name="Time" id="Time" required>
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+        <option value="evening">Evening</option>
+        </select>
+    </div>
+    <div style="text-align:center;">
+        <br>
+        <label for="Schedules">Choose Trainingg Schedules</label>
+        <br> 
+        <select name="Schedules" id="Schedules" required>
+        <option value="weekday">Weekday (Mon-Fri)</option>
+        <option value="weekend">weekend (Sat-Sun)</option>
+        </select>
+    </div>
+  <div style="text-align:center;">
+        <label for="motivates">Who's your favorite Volleyball Player and why?</label>
+        <br>
+        <input type="text" name="Motivates" id="Motivates" required>
+    </div>
+
+    <div style="text-align:center;">
+        <label for="motivates">Describe Your dream moment on the volleyball court</label>
+        <br>
+        <input type="text" name="Motivates" id="Motivates" required>
+    </div>
+    <button type="button" style="width: 200px; height: 50px; background-color: #e78041; color: white; text-align: center;">Spiker Your Dream!</button></a>
+    </div>
+
+    <br>
+    <footer>
+        <h5 style="font-family: sans-serif; text-align: center; color: rgb(184, 57, 6)">© 2025 Beyond The Net! | Designed by Azra | Inspired by Haikyuu!! | <a href='https://haikyu.jp'>Official Website</a></h5>
+    </footer>
+    
+</body>
+</html>
